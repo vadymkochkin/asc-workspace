@@ -1,0 +1,75 @@
+@media (max-width: 575.98px) {
+  #intro {
+    .container-fluid {
+      .hero-text {
+        h1{
+          text-indent: 0px!important;
+          letter-spacing: 0px!important;
+        }
+      }
+
+      h4{
+        text-indent: 0px!important;
+        letter-spacing: 2px!important;
+        line-height: 80px!important;
+      }
+    }
+  }
+
+  #distribution {
+    .faction-title {
+      font-size: 1.5rem!important;
+      padding: 0px!important;
+    }
+    .balance-title{
+      font-size: 2rem!important;
+    }
+
+    .race-item {
+      .race-title{
+        position: relative!important;
+        right: -1rem!important;
+        padding-right: 0px!important;
+        letter-spacing: 0px!important;
+        font-size: 12px!important;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) and (min-width: 576px) {
+  #intro {
+    .container-fluid {
+      .hero-text {
+        h1{
+          text-indent: 20px!important;;
+          letter-spacing: 20px!important;;
+        }
+        h4{
+          text-indent: 0px!important;
+          letter-spacing: 2px!important;
+          line-height: 80px!important;
+        }
+      }
+    }
+  }
+  #distribution {
+    .faction-title {
+      font-size: 1.5rem!important;
+      padding: 0px!important;
+    }
+    .balance-title{
+      font-size: 2rem!important;
+    }
+
+    .race-item {
+      .race-title{
+        position: relative!important;
+        right: -1rem!important;
+        padding-right: 0px!important;
+        letter-spacing: 0px!important;
+        font-size: 12px!important;
+      }
+    }
+  }
+}

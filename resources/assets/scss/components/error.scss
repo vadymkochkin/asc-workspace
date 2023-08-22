@@ -1,0 +1,82 @@
+@import '~bootstrap/scss/bootstrap';
+@import "../base/style";
+@import "../base/extension";
+@import "../base/animated";
+
+$article-text: #f0e6d2;
+$article-header: #f1e6cf;
+$article-link: #c8aa6e;
+
+* a {
+    color: #c9aa71 !important;
+}
+
+body{
+    background-color: #131415;
+}
+
+#page-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content-wrapper{
+    min-height: 0px!important;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding-top: 15rem;
+}
+
+.maincontainer{
+    text-align: center;
+    font-family: $font-stack-alt;
+
+    .content{
+        justify-content: center;
+        text-align: center;
+
+        h1{
+            color: $article-link;
+
+        }
+
+        p{
+            color: $article-text;
+        }
+
+        a{
+            color: $article-link;
+        }
+
+        .load-container{
+            display: flex;
+            justify-content: center;
+            #load-button{
+                align-self: center;
+                text-align: center;
+                padding: 1rem 2rem;
+                border: 1px solid $article-link;
+                color: $article-link;
+                width: 300px;
+                background-color: transparent;
+
+                &:hover{
+                    background-color: $article-link;
+                    color: black;
+                    transition: all .3s ease-in-out;
+                }
+            }
+            margin: 3rem 0;
+        }
+    }
+}
+
+
+@media (min-width: 1200px){
+    article{
+
+    }
+}

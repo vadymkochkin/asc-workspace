@@ -1,0 +1,37 @@
+// This file contains the styling for all custom cursors across the site.
+
+  *:not(.asc-default-hover){
+    cursor: url('../media/cursor/Point.PNG'), auto !important;
+  }
+  
+  input:hover, .cursor-input{
+    cursor: url('../media/cursor/WorkOrders.PNG'), auto !important;
+  }
+
+  .scroller-item{
+    cursor: url('../media/cursor/Cast.PNG'), pointer !important
+  }
+
+  .scroller-item .footer-element .scroll-downs{
+    cursor: url('../media/cursor/Cast.PNG'), pointer !important
+  }
+  
+  #gl, .cursor-move{
+    cursor: url('../media/cursor/UI-Cursor-Move.PNG'), move !important;
+  }
+  
+  a:hover, .cursor-click, .asc-default-hover, .shop-item-border, button:hover, a>h5:hover, .typebtn, .typebtn i, a i, a span, a img{
+    cursor: url('../media/cursor/Cast.PNG'), pointer !important;
+  }
+
+  img:hover{
+    cursor: url('../media/cursor/Cast.PNG'), pointer !important;
+  }
+
+  .TweetAuthor-name .Identity-name .customisable-highlight:hover{
+    cursor: url('../media/cursor/Cast.PNG'), pointer !important;
+  }
+
+  #load-button{
+    cursor: url('../media/cursor/Cast.PNG'), auto !important;
+  }

@@ -1,0 +1,69 @@
+@import "../base/style";
+@import "../components/card";
+
+.container-flex{
+  min-height: 78.4vh;
+  position: relative;
+}
+
+#auth-form{
+  //width: 33%;
+  //margin: 4% auto;
+  .btn-primary {
+    background-color: #262626 !important;
+    border: none !important;
+    color: $primary-color;
+    height: 50px;
+    font-size: 19px;
+    font-weight: bold;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  label{
+    color: white;
+  }
+
+  .input-group-text {
+    background-color: #262626 !important;
+    border: 1px solid #444951 !important;
+  }
+
+  .card {
+    background-color: #1e1e1e;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2) !important;
+  }
+}
+
+/* Font Awesome Styling */
+
+.fas {
+  position: absolute;
+  font-size: 1rem;
+  line-height: 58px;
+  padding-top: 0;
+  padding-left: 18px;
+  padding-bottom: 18px;
+  color: rgba(128, 128, 128, 0.596);
+}
+
+.text-input-fa {
+  right: 0 !important;
+  top: 0;
+  padding-right: 18px;
+  color: crimson;
+}
+
+.text-input-fa-success {
+  right: 0 !important;
+  top: 0;
+  padding-right: 18px;
+  color: rgb(0, 230, 0);
+}
+
+.date-input-fa {
+  right: 0 !important;
+  top: 0;
+  padding-right: 30px;
+  color: crimson;
+  line-height: 46px;
+}

@@ -1,0 +1,15 @@
+.ui-menu {
+  max-height: 450px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  right: 0;
+  left: auto!important;
+
+  .ui-menu-item {
+    background-color: #131415;
+
+    img{
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+#download-page{
+    .content{
+        background-color: #121212;
+        max-width: 70%;
+        padding: 33px;
+        border: 1px solid #2e2e2e;
+        box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15);
+    }
+
+    .thankstitle{
+        font-weight: bold;
+    }
+
+    .return-link{
+        top: 1.5rem;
+        position: relative;
+        @include transition(color .35s ease);
+
+        &:hover{
+            color: white !important;
+        }
+    }
+
+    .typebtn{
+        width: 8em;
+        height: 8em;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include transition(all .5s ease);
+        background-color: #1e1e1e;
+        margin: 0 0.5rem;
+
+        i{
+            font-size: 72px;
+        }
+
+        &:hover{
+            color: white!important;
+           /// border-radius: 15px;
+        }
+    }
+
+    .typebtn.mac, .typebtn.linux{
+        user-select: none !important;
+        opacity: 0.5;
+        color: rgb(121, 109, 109) !important;
+        
+
+        i{
+            opacity: 0.5;
+            &:hover{
+                cursor: url('../media/cursor/Point.PNG'), auto !important;
+            }
+        }
+
+        &:hover{
+            //border-radius: 15px;
+            color: white !important;
+            cursor: url('../media/cursor/Point.PNG'), auto !important;
+        }
+    }
+
+    .typebtn_row{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .downloadfor{
+        line-height: 65px;
+        font-weight: bold;
+    }
+}
+

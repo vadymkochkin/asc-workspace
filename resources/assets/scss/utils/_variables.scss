@@ -1,0 +1,165 @@
+// Body
+$white: #ffffff;
+$body-bg: #131415;
+
+// Social Media
+$facebook: #4863ae;
+$twitter: #46c0fb;
+$google: #dd4b39;
+$github: #4183c4;
+
+// Brands
+$brand-primary: #3097d1;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #bf5329;
+$text-color: #636b6f;
+
+// Typography
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Transitions
+$transitionSpeed: 0.35s;
+
+// Radius'
+$standard-radius: 3px;
+
+// MQ's
+$mq-tiny: 320px;
+$phone: 480px;
+$bs4-phone: 576px;
+$tablet: 767px;
+$desktop: 992px;
+$lg-desktop: 1200px;
+
+// Margins and Padding
+$num-of-classes: 5;
+$directions: ("top", "bottom", "left", "right");
+$types: ("margin", "padding");
+$queries: (
+  $mq-tiny: "xxs",
+  $phone: "xs",
+  $tablet: "sm",
+  $desktop: "md",
+  $lg-desktop: "lg"
+);
+
+// // Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels / Cards
+$panel-default-heading-bg: $white;
+
+//Mixin
+
+//Transition
+//Example: @include transition(color .3s ease);
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+//Opacity
+//Example: @include opacity(0.8)
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+//Animation
+//Example: @include animation('slide-down 5s 3');
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+//Keyframes
+/* Example:
+  @include keyframes(slide-down) {
+    0% { opacity: 1; }
+    90% { opacity: 0; }
+  }
+*/
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+      @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+      @content;
+  }  
+  @-ms-keyframes #{$animation-name} {
+      @content;
+  }
+  @-o-keyframes #{$animation-name} {
+      @content;
+  }  
+  @keyframes #{$animation-name} {
+      @content;
+  }
+}
+
+//Cross-browser gradient text
+@mixin gradient-text($gradient, $bg : 'light') {
+  @supports(mix-blend-mode: lighten) {
+    position: relative;
+    
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      
+      background: unquote($gradient);
+      pointer-events: none;
+    }
+
+    @if ($bg == 'light') {
+      color: #000;
+      background: #fff;
+      mix-blend-mode: multiply;
+
+      &::before {
+        mix-blend-mode: screen;
+      }
+    } @else {
+      color: #fff;
+      background: #000;
+      mix-blend-mode: lighten;
+
+      &::before {
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+}
+
+//Line height crop.
+@mixin lhCrop($line-height) {
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
+}
+
+
+
+
+

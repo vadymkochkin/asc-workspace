@@ -1,0 +1,411 @@
+// This file contains the styling for the footer present across all pages on the site.
+
+.sticky-header {
+	height: 50px!important;
+
+	.container {
+		margin-top: 0;
+		max-width: 100vw;
+
+		nav {
+			margin: 0;
+			border-radius: 0px;
+			height: 50px;
+
+			.navbar-nav {
+				line-height: 50px !important;
+				height: 50px !important;
+
+				.btn-group {
+					.sticky-toggle {
+						background-size: 1em 4em !important;
+					}
+				}
+
+				.nav-item {
+					position: relative;
+					height: 100%;
+					line-height: 50px !important;
+				}
+			}
+		}
+
+		.navbar-brand {
+			max-width: 210px !important;
+			width: 195px !important;
+			.brand-icon {
+				.brand-small {
+					height: 50px !important;
+					position: relative !important;
+					left: 0px !important;
+					@include transition(all 0.6s ease);
+					opacity: 1 !important;
+					display: inline-block !important;
+				}
+			}
+
+			.brand-large {
+				//opacity: 0 !important;
+				//display: none !important;
+				width: 0;
+			}
+		}
+	}
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+
+	.container {
+		margin-top: 0;
+		max-width: 1600px;
+		@include transition(all 0.3s ease);
+
+		.navbar-brand {
+			max-width: 210px;
+			width: 195px !important;
+			.brand-icon {
+				.brand-large {
+					height: 200px;
+					position: absolute;
+					top: -60px;
+					left: -100px;
+					@include transition(all 0.6s ease);
+					opacity: 1;
+					display: inline-block;
+					pointer-events: none !important;
+				}
+			}
+
+			.brand-small {
+				opacity: 0;
+				display: none;
+			}
+		}
+
+		nav {
+			position: relative;
+			margin: 60px 40px 0px 40px;
+			//@include transition(transform 0.3s, width 0.3s);
+			@include transition(all 0.3s ease);
+			height: 80px;
+			background-color: white;
+			border-radius: 4px;
+			width: 100%;
+			padding: 0;
+			background: #211510 url(../media/image/index/sitenav-bar-bg.jpg) repeat-x;
+			background-size: auto;
+			background-position: center;
+			//background-size: auto 100%;
+			-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+
+			&::before {
+				background: rgba(51, 48, 46, 0.5);
+				bottom: 1px;
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 1px;
+				width: 1px;
+			}
+
+			&::after {
+				background: rgba(51, 48, 46, 0.5);
+				bottom: 1px;
+				content: "";
+				position: absolute;
+				left: -1px;
+				top: 1px;
+				width: 1px;
+				left: auto;
+				right: -1px;
+			}
+
+			.megamenu-li {
+				position: static;
+			}
+
+			.menu-toggled {
+				display: block !important;
+			}
+
+			.megamenu {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				right: 0;
+				padding: 1rem !important;
+				margin-top: 0;
+				//height: 380px;
+				/*
+        @include transition(.7s max-height ease-out,.4s opacity cubic-bezier(.23,1,.32,1));*/
+				background: linear-gradient(
+					to bottom,
+					rgba(9, 9, 9, 0.97),
+					rgba(19, 19, 19, 0.97)
+				);
+				-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+				border: 0 solid #241505;
+				border-top-color: rgb(36, 21, 5);
+				border-top-style: solid;
+				border-top-width: 0px;
+				border-right-width: 0px;
+				border-bottom-color: rgb(36, 21, 5);
+				border-bottom-width: 0px;
+				border-left-width: 0px;
+				border-bottom-color: #311c06;
+				border-top: none;
+
+				.menu-container {
+					padding: 1rem 0;
+					.row-header {
+						padding: 0.5rem 0;
+						border-bottom: 1px solid #241505;
+						color: white;
+						font-weight: bold;
+					}
+
+					.dropdown-item {
+						font-weight: bold;
+						padding: 0.25rem 0;
+						@include transition(color 0.35s ease);
+
+						&:hover {
+							background-color: transparent !important;
+							color: white !important;
+						}
+					}
+				}
+			}
+
+			.navbar-nav {
+				height: 80px;
+				position: relative;
+
+				.account-tab {
+					background: url(../media/image/index/sitenav-bar-user-bg.jpg) repeat-x
+						0 0;
+					background-size: auto;
+					background-size: auto 100%;
+
+					.sticky-toggle {
+						height: 100%;
+						border: 0 !important;
+						box-shadow: none !important;
+					}
+
+					.btn-group {
+						height: 100%;
+						button {
+							@include transition(all 0.35s ease);
+							height: 100% !important;
+						}
+					}
+				}
+
+				&::before {
+					//background: rgba(21, 13, 9, 0.8);
+					background: rgba(8, 8, 8, 0.5);
+					left: 1px;
+					right: auto;
+					bottom: 1px;
+					content: "";
+					position: absolute;
+					top: 1px;
+					width: 1px;
+				}
+
+				&::after {
+					//background: rgba(21, 13, 9, 0.8);
+					background: rgba(8, 8, 8, 0.5);
+					left: auto;
+					right: 1px;
+					bottom: 1px;
+					content: "";
+					position: absolute;
+					top: 1px;
+					width: 1px;
+				}
+
+				.btn-group {
+					&::before {
+						//background: rgba(68, 47, 38, 0.5);
+						background: rgba(51, 48, 46, 0.5);
+						bottom: 1px;
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 1px;
+						width: 1px;
+					}
+
+					&::after {
+						//background: rgba(21, 13, 9, 0.8);
+						background: rgba(8, 8, 8, 0.5);
+						left: auto;
+						right: 0;
+						bottom: 1px;
+						content: "";
+						position: absolute;
+						top: 1px;
+						width: 1px;
+					}
+
+					.sticky-toggle {
+						text-transform: uppercase;
+						background-color: transparent !important;
+						border: none !important;
+						font-size: 1.2rem;
+						padding: 0 1rem;
+						@include transition(0.25s all 0s cubic-bezier(0.23, 1, 0.32, 1));
+						-webkit-background-clip: text !important;
+						-webkit-text-fill-color: transparent !important;
+						background-image: -webkit-linear-gradient(
+							top,
+							#efd100 0,
+							#e2a233 19%,
+							#f0c328 30%,
+							#fff1a3 43%,
+							#ffe13e 50%,
+							#fff 51%,
+							#fff 100%
+						) !important;
+						background-size: 1em 1.65em;
+						color: #f8b700 !important;
+						display: inline-block;
+						//line-height: 1.5em !important;
+						position: relative;
+						z-index: auto;
+						background-position: center 0;
+						border: 0 !important;
+						box-shadow: none !important;
+
+						&:hover {
+							background-image: -webkit-linear-gradient(
+								top,
+								#505050 0,
+								#afafaf 19%,
+								#d6d6d6 30%,
+								#f3f3f3 43%,
+								#f1f1f1 50%,
+								#fff 51%,
+								#fff 100%
+							);
+						}
+						&::after{
+							display: inline-block;
+							margin-left: 0.255em;
+							vertical-align: 0.255em;
+							content: "";
+							border-top: 0.3em solid;
+							border-right: 0.3em solid transparent;
+							border-bottom: 0;
+							border-left: 0.3em solid transparent;
+						}
+					}
+				}
+
+				.nav-item {
+					position: relative;
+					height: 100%;
+					line-height: 80px !important;
+
+					.nav-link:focus button:focus {
+						outline: none !important;
+						box-shadow: none !important;
+					}
+
+					&::before {
+						//background: rgba(68, 47, 38, 0.5);
+						background: rgba(51, 48, 46, 0.5);
+						bottom: 1px;
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 1px;
+						width: 1px;
+					}
+
+					&::after {
+						//background: rgba(21, 13, 9, 0.8);
+						background: rgba(8, 8, 8, 0.5);
+						left: auto;
+						right: 0;
+						bottom: 1px;
+						content: "";
+						position: absolute;
+						top: 1px;
+						width: 1px;
+					}
+
+					&:last-child {
+						&::after {
+							background: rgba(51, 48, 46, 0.5);
+							bottom: 1px;
+							content: "";
+							position: absolute;
+							right: 0;
+							top: 1px;
+							width: 1px;
+						}
+					}
+
+					.nav-link {
+						font-size: 1.2rem;
+						padding: 0 1rem;
+						@include transition(0.25s all 0s cubic-bezier(0.23, 1, 0.32, 1));
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+						background-image: -webkit-linear-gradient(
+							top,
+							#efd100 0,
+							#e2a233 19%,
+							#f0c328 30%,
+							#fff1a3 43%,
+							#ffe13e 50%,
+							#fff 51%,
+							#fff 100%
+						);
+						background-size: 1em 2.5em;
+						color: #f8b700;
+						display: inline-block;
+						line-height: 1.5em !important;
+						position: relative;
+						z-index: auto;
+						background-position: center 0;
+
+						&:hover {
+							background-image: -webkit-linear-gradient(
+								top,
+								#505050 0,
+								#afafaf 19%,
+								#d6d6d6 30%,
+								#f3f3f3 43%,
+								#f1f1f1 50%,
+								#fff 51%,
+								#fff 100%
+							);
+						}
+					}
+
+					.user-price-icon {
+						width: 16px;
+					}
+
+					.user-dp {
+						font-size: 16px;
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+}

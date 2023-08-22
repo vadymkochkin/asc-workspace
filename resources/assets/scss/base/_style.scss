@@ -1,0 +1,464 @@
+@import "../components/cursors";
+@import "fonts";
+@import "../components/footer";
+
+//Fonts
+$font-stack-old: Raleway, "Segoe UI", Helvetica, sans-serif;
+$font-stack: "Beaufort", "Segoe UI", Helvetica, sans-serif;
+$font-stack-alt: "Beaufort", "Segoe UI", Helvetica, sans-serif;
+
+//Colors
+$primary-color: #c9aa71;
+$active-color: #f1e6cf;
+$secondary-color: #ffe4c7;
+$secondary-darker-color: rgb(190, 180, 169);
+$title-color: white;
+$text-color: #8a8a8a;
+$sidebar-color: #090602;
+$transparent: rgba(0, 0, 0, 0);
+$blizz-color: rgb(0, 174, 255);
+$article-text: #f0e6d2;
+$article-header: #f1e6cf;
+$article-link: #c8aa6e;
+
+$link-color: $primary-color;
+
+//Hover Colors
+$primary-hover-color: rgb(192, 135, 73);
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+//Removes underline from links upon hover.
+a {
+  text-decoration: none !important;
+}
+
+//Nuke bootstrap blue glow around buttons.
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent !important;
+
+}
+
+// Swal Modal Changes
+.swal2-modal {
+  width: 478px;
+  opacity: 1;
+  pointer-events: none;
+  background-color: #121212 !important;
+  text-align: center;
+  border-radius: 5px;
+  position: static;
+  margin: 20px auto;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  z-index: 10001;
+  transition: opacity 0.2s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
+}
+
+.swal2-icon--success::after,
+.swal2-icon--success::before {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 60px;
+  height: 120px;
+  background-color: #121212 !important;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.swal2-icon--success__hide-corners {
+  width: 5px;
+  height: 90px;
+  background-color: #121212 !important;
+  padding: 1px;
+  position: absolute;
+  left: 28px;
+  top: 8px;
+  z-index: 1;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.swal2-icon--success__line {
+  height: 5px;
+  background-color: #73d23d !important;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2;
+}
+
+.swal2-title {
+  color: $primary-color !important;
+  font-weight: 600;
+  text-transform: none;
+  position: relative;
+  display: block;
+  padding: 13px 16px;
+  padding-bottom: 13px;
+  font-size: 27px;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.swal2-text {
+  font-size: 16px;
+  position: relative;
+  float: none;
+  line-height: normal;
+  vertical-align: top;
+  text-align: left;
+  display: inline-block;
+  margin: 0;
+  padding: 0 10px;
+  font-weight: 400;
+  color: $secondary-color !important;
+  max-width: calc(100% - 20px);
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.swal2-icon--success__ring {
+  width: 80px;
+  height: 80px;
+  border: 4px solid hsl(98.3, 62.3%, 53.1%) !important;
+  border-radius: 50%;
+  box-sizing: content-box;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  z-index: 2;
+}
+
+.swal2-styled {
+  background-color: #c9aa71 !important;
+  color: black !important;
+  border: none;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 24px;
+  margin: 0;
+  cursor: pointer;
+
+  box-shadow: 0 0 20px 1px #625030 !important;
+  @include transition(all 0.35s ease-in-out);
+
+  &:hover {
+    box-shadow: 0 0 20px 1px $primary-color !important;
+  }
+}
+
+//Fixes
+body {
+  overflow-x: hidden !important;
+  color: white;
+}
+
+#page-wrapper {
+  position: relative;
+  min-height: 110vh;
+
+  #content-wrapper {
+    min-height: calc(110vh);
+    padding-top: 15rem;
+  }
+  #content-wrapper-home{
+    min-height: calc(110vh);
+    padding-top: 0;
+  }
+}
+
+.ucp {
+  .content-wrapper{
+    border-top: 1px solid #776f5d;
+  }
+}
+
+.vertical-center {
+  //min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 55vh !important; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  height: auto;
+
+  .container {
+    margin-bottom: auto !important;
+    margin-top: auto !important;
+  }
+}
+
+.maincontainer {
+  height: 100%;
+}
+
+#page-img-container {
+  width: 100vw;
+  display: flex;
+  //justify-content: center;
+  #page-background {
+    position: absolute;
+    //top: 52px;
+    top: 0px;
+  }
+}
+
+#page-full-img-container {
+  width: 100vw;
+  display: flex;
+  //justify-content: center;
+  #page-background-full {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+  }
+}
+
+
+//Page-Title
+.page-title {
+  color: $article-text;
+  font-family: $font-stack-alt;
+
+  h2 {
+    color: $article-link;
+    text-transform: uppercase;
+  }
+}
+
+.swal2-container {
+  .swal2-modal {
+    .swal2-actions {
+      button {
+        width: 100%;
+      }
+    }
+
+    .swal2-footer {
+      .swal2-button-container {
+        width: 100% !important;
+
+        .swal2-button {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+
+//Disable white background in readonly forms.
+.form-control:disabled, .form-control[readonly] {
+  background-color: transparent !important;
+}
+
+//Ascension Button
+.asc-button {
+  background-color: $primary-color;
+  //padding: 1rem 3rem;
+  //top: 1rem;
+  border-radius: 5px;
+  //position: relative;
+  color: black !important;
+  border: none !important;
+  box-shadow: 0 0 5px 1px #625030;
+  @include transition(all 0.35s ease-in-out);
+
+  &:hover {
+    box-shadow: 0 0 5px 1px $primary-color;
+    color: black !important;
+  }
+}
+
+// Custom Scrollbar styling for chrome.
+
+::-webkit-scrollbar {
+  width: 0.2rem !important;
+}
+
+::-webkit-scrollbar-track {
+  background: $body-bg !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary-color !important;
+  border-radius: 7px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 55, 27, 0.71) !important;
+}
+
+.asc-default-hover {
+  box-shadow: 0 0 1px 0px $primary-color inset, 0 0 1px 0px $primary-color !important; //Anti-aliasing on borders.
+  transition: box-shadow 0.3s ease-in-out !important;
+  transition: transform 0.3s ease-in-out !important;
+  -moz-box-shadow: 0 0 20px $transparent !important;
+  -webkit-box-shadow: 0 0 20px $transparent !important;
+  box-shadow: 0px 0px 20px $transparent !important;
+  position: relative !important;
+}
+
+.asc-default-hover:hover {
+  //Make the user realize the card is clickable.
+  cursor: pointer;
+
+  //Add Glow
+  -moz-box-shadow: 0 0 30px $primary-color !important;
+  -webkit-box-shadow: 0 0 30px $primary-color !important;
+  box-shadow: 0px 0px 30px $primary-color !important;
+  transform: scale(1.05) !important;
+  z-index: 999 !important;
+}
+
+.none {
+  visibility: hidden;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.error-text{
+  color: #a22605;
+  font-size: 18px!important;
+  font-weight: bold;
+  font-family: sans-serif;
+  position: relative;
+  bottom: 1rem;
+}
+
+.destroy {
+  display: none;
+}
+
+.dropdown-menu .show {
+  z-index: 9999;
+}
+
+/*\
+ * Restore Bootstrap 3 "hidden" utility classes.
+\*/
+
+/* Breakpoint XS */
+@media (max-width: 575px) {
+  .hidden-xs-down,
+  .hidden-sm-down,
+  .hidden-md-down,
+  .hidden-lg-down,
+  .hidden-xl-down,
+  .hidden-xs-up,
+  .hidden-unless-sm,
+  .hidden-unless-md,
+  .hidden-unless-lg,
+  .hidden-unless-xl {
+    display: none !important;
+  }
+}
+
+/* Breakpoint SM */
+@media (min-width: 576px) and (max-width: 767px) {
+  .hidden-sm-down,
+  .hidden-md-down,
+  .hidden-lg-down,
+  .hidden-xl-down,
+  .hidden-xs-up,
+  .hidden-sm-up,
+  .hidden-unless-xs,
+  .hidden-unless-md,
+  .hidden-unless-lg,
+  .hidden-unless-xl {
+    display: none !important;
+  }
+}
+
+/* Breakpoint MD */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-md-down,
+  .hidden-lg-down,
+  .hidden-xl-down,
+  .hidden-xs-up,
+  .hidden-sm-up,
+  .hidden-md-up,
+  .hidden-unless-xs,
+  .hidden-unless-sm,
+  .hidden-unless-lg,
+  .hidden-unless-xl {
+    display: none !important;
+  }
+}
+
+/* Breakpoint LG */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-lg-down,
+  .hidden-xl-down,
+  .hidden-xs-up,
+  .hidden-sm-up,
+  .hidden-md-up,
+  .hidden-lg-up,
+  .hidden-unless-xs,
+  .hidden-unless-sm,
+  .hidden-unless-md,
+  .hidden-unless-xl {
+    display: none !important;
+  }
+}
+
+/* Breakpoint XL */
+@media (min-width: 1200px) {
+  .hidden-xl-down,
+  .hidden-xs-up,
+  .hidden-sm-up,
+  .hidden-md-up,
+  .hidden-lg-up,
+  .hidden-xl-up,
+  .hidden-unless-xs,
+  .hidden-unless-sm,
+  .hidden-unless-md,
+  .hidden-unless-lg {
+    display: none !important;
+  }
+}
+
+/*
+@media (max-width: 1920px) {
+  #content-wrapper{
+    min-height: 86.5vh;
+  }
+}
+
+@media (max-width: 2560px) {
+  #content-wrapper{
+    min-height: 88vh;
+  }
+}
+*/

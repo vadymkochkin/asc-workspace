@@ -1,0 +1,279 @@
+/* Content Header Section */
+
+.content-header {
+  padding: 20px;
+  position: relative;
+  display: block;
+  p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+/* Content Main */
+
+.content-inner {
+  padding: 20px;
+  /*background: #2d3035;*/
+  color: #8a8d93;
+  /*background: #1f1f1ff1;*/
+  background: #0f0f0ff1;
+  border: 1px solid rgba(232, 216, 178, 0.479);
+  border-radius: 10px;
+}
+
+.content-title {
+  h5 {
+    color: rgb(232, 216, 178);
+    font-size: 22px;
+  }
+  padding-bottom: 10px;
+  border-bottom: none;
+}
+
+.content-body {
+  padding-top: 10px;
+}
+
+section {
+  padding: 0 0px;
+}
+
+/* Block Section */
+
+.block-title i {
+  margin-right: 10px;
+}
+
+.block-body {}
+
+.col-in-col {
+  margin: 0px;
+  padding-left: 0px;
+}
+
+/* Table Section */
+
+.dataTables_wrapper {
+  .dataTables_length, .dataTables_filter, .dataTables_info, .dataTables_processing, .dataTables_paginate {
+    color: #8a8d93 !important;
+  }
+}
+
+div.dataTables_wrapper div.dataTables_info {
+  padding-top: 0.85em;
+  white-space: nowrap;
+}
+
+.table {
+  /*border-color: grey;*/
+}
+
+select {
+  height: calc(2.0rem + 2px);
+  line-height: 1;
+  color: rgb(138, 141, 147);
+  vertical-align: middle;
+  -webkit-appearance: none;
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(68, 73, 81);
+  border-image: initial;
+  border-radius: 0px;
+  background-color: transparent;
+}
+
+input {
+  color: rgb(151, 154, 159);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(68, 73, 81);
+  border-image: initial;
+  background: transparent;
+  border-radius: 0px;
+}
+
+.page-link {
+  margin-left: -1px;
+  line-height: 1.25;
+  color: rgb(138, 141, 147);
+  background-color: transparent;
+  padding: 0.5rem 0.75rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(138, 141, 147);
+  border-image: initial;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  background-color: transparent;
+  border: none !important;
+  color: rgb(138, 141, 147) !important;
+
+  &.disabled {
+    .page-link{
+      color: #6c757d!important;
+      pointer-events: none;
+      background: none;
+
+      &:hover{
+        background: none!important;
+      }
+    }
+
+    &:hover{
+      background: none!important;
+    }
+  }
+
+  &.active {
+    .page-link{
+      background: none;
+      background-color: #3b4047;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #8a8d93;
+      -o-border-image: initial;
+      border-image: initial;
+    }
+  }
+  &.current {
+    background: none !important;
+    background-color: #3b4047 !important;
+    color: #fff !important;
+  }
+
+  &:hover {
+    color: black !important;
+    border-color: rgba(255, 255, 255, 0) !important;
+    background-color: #c9aa71 !important;
+  }
+
+  a{
+    &.page-link{
+      &:focus{
+        box-shadow: none;
+      }
+    }
+    &:hover{
+      color: black !important;
+      border-color: rgba(255, 255, 255, 0) !important;
+      background-color: #c9aa71 !important;
+    }
+
+    &.active{
+      background: none;
+      background-color: #3b4047;
+    }
+
+    &.current {
+      background: none !important;
+      background-color: #3b4047 !important;
+      color: #fff !important;
+    }
+  }
+}
+
+.table {
+  td, th {
+    border: none;
+  }
+}
+
+table.dataTable thead th {
+  border-color: #34383d !important;
+}
+
+.table {
+  td {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #34383d;
+  }
+  tr {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #34383d;
+    a {
+      color: rgb(151, 152, 153);
+      &:hover {
+        color: rgb(171, 172, 173) !important;
+      }
+    }
+  }
+  &.dataTable {
+    tbody tr {
+      background-color: transparent;
+    }
+    tfoot th {
+      border-top: 1px solid #34383d;
+    }
+  }
+}
+
+table.dataTable {
+  tfoot td {
+    border-top: 1px solid #34383d;
+  }
+  &.no-footer {
+    border-color: #34383d !important;
+  }
+}
+
+.table.dataTable thead {
+  .sorting_desc, .sorting, .sorting_asc {
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .table-country {
+    display: none !important;
+  }
+}
+
+/* Status Section */
+
+.status-unconfirmed {
+  color: rgb(83, 84, 85);
+}
+
+.status-confirmed {}
+
+.status-pending {
+  color: #d79602;
+}
+
+.status-fixed {
+  color: #7e8d09;
+}
+
+.status-closed {
+  color: crimson;
+}
+
+.status-duplicate {
+  color: rgb(185, 29, 164);
+}
+
+.td-rating {
+  display: flex;
+}
+
+.rating-btn:hover {
+  cursor: pointer;
+}
+
+.thumb-up:hover {
+  color: rgb(100, 181, 247);
+}
+
+.thumb-down:hover {
+  color: crimson;
+}
+
+#bugtracker_table {
+  color: #acacac;
+}

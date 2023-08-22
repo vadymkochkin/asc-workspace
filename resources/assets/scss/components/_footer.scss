@@ -1,0 +1,54 @@
+// This file contains the styling for the footer present across all pages on the site.
+footer{
+    position: relative;
+    bottom: 0;
+    background-color: #121212;
+    border-top: 2px solid #262626;
+    width: 100vw !important;
+    min-width: 100vw !important;
+    overflow: hidden;
+    .container{
+        margin-bottom: 0 !important;
+        .footer-content{
+            justify-content: center;
+            .footer-logo{
+
+            }
+
+            .footer-text{
+                margin-left: 1rem;
+                font-size: 1rem;
+                color: #8c8c8c;
+
+                hr{
+                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                }
+
+                a{
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1rem;
+                    font-size: 1rem;
+                    color: #c9aa71 !important;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1000px){
+    #footer_logo{
+        display: none;
+    }
+
+    footer{
+        .container{
+            .footer-content{
+                .footer-text{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+*:not(.asc-default-hover) {
+  cursor: url(../media/cursor/Point.PNG), auto !important;
+}
+
+::-webkit-scrollbar {
+  width: 0.2rem !important;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9aa71 !important;
+  border-radius: 7px !important;
+}
+::-webkit-scrollbar-track {
+  background-color: #121212 !important;
+}
+
+.asc-error-tooltip {
+  max-width: 100%;
+  padding: 0.25rem 0.5rem;
+  margin-top: .1rem;
+  font-size: 0.6875rem;
+  line-height: 1.6;
+  color: #ffffff;
+  background-color: rgba(220, 53, 69, 0.9);
+  border-radius: 0.25rem;
+}
+
+.l-like{
+  background-color: #004400;
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+}
+
+.l-dislike{
+  background-color: #440000;
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+}
+
+.l-like:hover{
+  background-color: #008800;
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+.l-dislike:hover{
+  background-color: #880000;
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+.l-checked{
+  background-color: #222;
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+.drop-item{
+  background-color: #333;
+}
+.drop-item-btn{
+  background-color: #333;
+  border-color:wheat !important;
+  color:wheat;
+}
+
+.item-action-dropdown{
+  position: absolute;
+}

@@ -1,0 +1,95 @@
+// This file contains the styling for the footer present across all pages on the site.
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  .container {
+    margin-top: 0;
+    max-width: 1400px;
+
+    nav {
+      position: relative;
+      margin: 40px;
+      @include transition(transform 0.3s, width 0.3s);
+      height: 80px;
+      background-color: white;
+      border-radius: 4px;
+      width: 100%;
+      padding: 0;
+
+      
+      background: #211510
+        url(https://worldofwarcraft.akamaized.net/static/components/SiteNav/sitenav-bar-bg.jpg)
+        repeat-x 80px 0;
+      background-size: auto;
+      background-size: auto 100%;
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+
+      /*
+      background: #211510
+        url(https://site.test/media/image/backgrounds/background_6.png) no-repeat 0 0;
+      background-size: cover;
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);*/
+
+      .navbar-nav {
+        height: 80px;
+        position: relative;
+        .nav-item {
+          position: relative;
+          height: 100%;
+          line-height: 80px;
+
+          &::before {
+            background: rgba(68, 47, 38, 0.5);
+            bottom: 1px;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 1px;
+            width: 1px;
+          }
+
+          .nav-link {
+            font-size: 1.2rem;
+            padding: 0 1rem;
+            -webkit-transition: 0.25s all 0s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: 0.25s all 0s cubic-bezier(0.23, 1, 0.32, 1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: -webkit-linear-gradient(
+              top,
+              #efd100 0,
+              #e2a233 19%,
+              #f0c328 30%,
+              #fff1a3 43%,
+              #ffe13e 50%,
+              #fff 51%,
+              #fff 100%
+            );
+            background-size: 1em 2.5em;
+            color: #f8b700;
+            display: inline-block;
+            line-height: 1.5em;
+            position: relative;
+            z-index: auto;
+            background-position: center 0;
+          }
+        }
+      }
+
+      .navbar-brand {
+        .brand-icon {
+          position: relative;
+          left: -50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+}

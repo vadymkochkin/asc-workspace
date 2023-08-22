@@ -1,0 +1,475 @@
+/* Sidebar Section */
+
+.sidebar {
+  width: 280px;
+  /*background: #2d3035;
+  color: #6a6c70;
+  border-right: 1px solid #34373d;*/
+  min-height: calc(100vh - 52px);
+  height: auto !important;
+  position: relative;
+  border-top: 1px solid #776f5d;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 9;
+  background: #0c0c0c;
+  color: #E8D8B2;
+  border-right: 1px solid rgb(139, 129, 105);
+  margin-top: 50px;
+}
+
+.modalnav .sidebar{
+  margin-left: 0!important;
+  margin-top: 0px!important;
+  width: auto!important;
+}
+
+.sidebar-list {
+  border: 0;
+  font-weight: normal;
+  line-height: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+  padding: 30px 0px;
+}
+
+.sidebar-section-header {
+  pointer-events: none;
+  cursor: default;
+  font-size: 20px;
+  padding: 12px 20px !important;
+  letter-spacing: .025rem;
+  font-family: "Beaufort", "Segoe UI", Helvetica, sans-serif !important;
+  font-weight: bold;
+  color: #f1e6cf;
+}
+
+.sidebar-list li {
+  position: relative;
+}
+
+.sidebar-list li a span {
+  vertical-align: middle;
+  color: #c9aa71 !important;
+  font-family: "Beaufort", "Segoe UI", Helvetica, sans-serif !important;
+  font-weight: bold;
+
+  &:hover{
+    color: #f1e6cf !important;
+  }
+}
+
+.sidebar-list li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: 50% 50%;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(232, 216, 178, 0.103);
+  transition: transform 250ms;
+}
+
+.sidebar-list li .sub-menu ul li::after {
+  background-color: transparent;
+}
+
+.sidebar-list .expanded::after {
+  background-color: transparent;
+}
+
+.sidebar-list li:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.sidebar-list li a i {
+  display: inline-block;
+  font-size: 26px;
+  line-height: 28px;
+  margin-left: 3px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 15px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding-right: 15px;
+  border-right: 1px solid #454649;
+  width: 40px;
+  color: rgb(232, 216, 178) !important;
+}
+
+.sidebar-list li a i.dropdown-arrow {
+  font-size: 20px;
+  line-height: 28px;
+  margin-left: 3px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 0px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding-right: 15px;
+  border: 0;
+  float: right;
+}
+
+.sidebar-list li a {
+  display: block;
+  padding: 12px 20px;
+  padding-right: 0px;
+  margin: 4px 0;
+  color: #c9aa71 !important;
+  font-family: "Beaufort", "Segoe UI", Helvetica, sans-serif !important;
+  font-weight: bold;
+
+  &:hover{
+    color: #f1e6cf !important;
+  }
+}
+
+.sidebar-list li.active {
+  background: #35383d00;
+}
+
+.sidebar-list li:hover {
+  background: hsla(0, 0%, 42%, 0.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.sidebar-list li a:hover {
+  color: #ffffff;
+}
+
+.sidebar-list li.active::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: crimson;
+}
+
+.sidebar-list li ul {
+  position: relative;
+  height: 100%;
+}
+
+.sidebar-list li ul li {
+  position: relative;
+  width: 100%;
+}
+
+.sidebar-list li ul li a {
+  display: block;
+  padding: 12px 80px;
+  font-size: 12px !important;
+  margin: 4px 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+  nav.sidebar.shrinked {
+    margin-left: 0;
+    display: none;
+    width: 50px;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .sidebar-section-header {
+    display: none;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a {
+    padding-right: 0px;
+    padding: 12px 0px;
+    text-align: center;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a i {
+    border-right: none;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a .shrink-item {
+    width: 100%;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a .shrink-item .dropdown-arrow {
+    margin-left: -20px;
+    width: 20px;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a .shrink-item {
+    display: block;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a .full-item {
+    display: none;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a span {
+    display: none
+  }
+
+  /**
+  * This is for modal sidebar.
+  */
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .sidebar-section-header {
+    display: none;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item a {
+    padding-right: 0px;
+    padding: 12px 0px;
+    text-align: left!important;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item .sub-menu a {
+    padding-right: 0px;
+    padding: 12px 50px;
+    text-align: left!important;
+  }
+
+  .modalnav nav.sidebar.shrinked {
+    margin-left: 0;
+    display: block;
+    width: 50px;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item a .shrink-item {
+    display: none;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item a .full-item {
+    display: block;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item a span {
+    display: inline
+  }
+  /*****/
+
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  nav.sidebar.shrinked {
+    margin-left: 0;
+    width: 70px;
+    display: none;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .sidebar-section-header {
+    display: none;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a {
+    padding-right: 0px;
+    padding: 12px 0px;
+    text-align: center;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a i {
+    border-right: none;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a .shrink-item {
+    width: 100%;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a .shrink-item .dropdown-arrow {
+    margin-left: -20px;
+    width: 20px;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a .shrink-item {
+    display: block;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a .full-item {
+    display: none;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a span {
+    width: 100%;
+    display: none;
+  }
+
+  /**
+  * This is for modal sidebar.
+  */
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .sidebar-section-header {
+    display: none;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item a {
+    padding-right: 0px;
+    padding: 12px 0px;
+    text-align: left!important;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item .sub-menu a {
+    padding-right: 0px;
+    padding: 12px 50px;
+    text-align: left!important;
+  }
+
+  .modalnav nav.sidebar.shrinked {
+    margin-left: 0;
+    display: block;
+    width: 50px;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item a .shrink-item {
+    display: none;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item a .full-item {
+    display: block;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item a span {
+    display: inline
+  }
+  /*****/
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  nav.sidebar.shrinked {
+    margin-left: 0;
+    width: 70px;
+    display: none;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .sidebar-section-header {
+    display: none;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a {
+    padding-right: 0px;
+    padding: 12px 0px;
+    text-align: center;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a i {
+    border-right: none;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a .shrink-item {
+    width: 100%;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a .shrink-item .dropdown-arrow {
+    margin-left: -20px;
+    width: 20px;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a .shrink-item {
+    display: block;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a .full-item {
+    display: none;
+  }
+
+  nav.sidebar.shrinked .sidebar-list .list-item a span {
+    width: 100%;
+    display: none;
+  }
+
+  /**
+  * This is for modal sidebar.
+  */
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .sidebar-section-header {
+    display: none;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item a {
+    padding-right: 0px;
+    padding: 12px 0px;
+    text-align: left!important;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item .sub-menu a {
+    padding-right: 0px;
+    padding: 12px 50px;
+    text-align: left!important;
+  }
+
+  .modalnav nav.sidebar.shrinked {
+    margin-left: 0;
+    display: block;
+    width: 50px;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item a .shrink-item {
+    display: none;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item a .full-item {
+    display: block;
+  }
+
+  .modalnav nav.sidebar.shrinked .sidebar-list .list-item a span {
+    display: inline
+  }
+  /*****/
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  .sidebar {
+    width: 240px;
+  }
+
+  nav.sidebar .sidebar-list .list-item a .shrink-item {
+    display: none;
+  }
+
+  nav.sidebar .sidebar-list .list-item a .full-item {
+    display: block;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  nav.sidebar .sidebar-list .list-item a .shrink-item {
+    display: none;
+  }
+
+  nav.sidebar .sidebar-list .list-item a .full-item {
+    display: block;
+  }
+
+  /* TEMPORARY FIX!!! */
+  .table-responsive {
+    overflow: visible;
+  }
+
+}
